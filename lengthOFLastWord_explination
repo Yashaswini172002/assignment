@@ -1,0 +1,32 @@
+Easy 1
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+A word is a maximal 
+substring consisting of non-space characters only.
+ 
+Example 1:
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+Example 2:
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+Example 3:
+Input: s = "luffy is still joyboy"
+Output: 6
+Explanation: The last word is "joyboy" with length 6.
+ 
+Constraints:
+1 <= s.length <= 104
+s consists of only English letters and spaces ' '.
+There will be at least one word in s.
+
+solution
+terate String from index 0 
+If we iterate the string from left to right, we would have to be careful about the spaces after the last word. 
+The spaces before the first word can be ignored easily. However, it is difficult to detect the length of the last word if there are spaces at the end of the string.
+This can be handled by trimming the spaces before or at the end of the string. 
+If modifying the given string is restricted, we need to create a copy of the string and trim spaces from that. 
+
+Time complexity: O(n), where n is the length of the input string
+Space complexity: O(n), where n is the length of the input string
