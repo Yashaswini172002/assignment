@@ -1,0 +1,18 @@
+maxSlidingWindow is a function that takes in an array nums, its size numsSize, the window size k, and a pointer returnSize to store the size of the resultant array.
+It initializes an array out to store the maximum elements in each sliding window.
+It maintains a double-ended queue (implemented using an array maxQueue) to store the indices of elements in the current window such that the front of the queue contains the index of the maximum element.
+It iterates through the array nums:
+It updates the maxQueue to maintain elements within the current window that are potential candidates for being the maximum.
+When the window slides (i >= k - 1), it assigns the maximum element within the window to out.
+It adjusts the front index of maxQueue if the element falling out of the window was the maximum element in the previous window.
+main Function:
+It prompts the user to input the size of the array (numsSize), the elements of the array (nums), and the value of k.
+It calls the maxSlidingWindow function with the provided array and k.
+Prints the resultant sliding window maximums obtained from the maxSlidingWindow function.
+This code utilizes a sliding window technique to find the maximum element in each window of size k within the user-input array nums. 
+It dynamically allocates memory for arrays and appropriately frees that memory at the end to prevent memory leaks.
+
+
+
+
+
