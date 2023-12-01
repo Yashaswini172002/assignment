@@ -1,0 +1,7 @@
+Approach: The basic solution is to have two loops and keep track of the maximum count for all different elements. 
+If maximum count becomes greater than n/3 then print it. 
+If the maximum count doesn’t become more than n/3 after the traversal of array then the majority element doesn’t exists.
+Complexity Analysis: 
+A nested loop is needed where both the loops traverse the array from start to end, so the time complexity is O(n^2).
+Auxiliary Space:  O(1)                                                                                                                                                                         
+As no extra space is required for any operation so the space complexity is constant.
