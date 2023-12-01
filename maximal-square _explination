@@ -1,0 +1,25 @@
+Certainly! This code is aimed at solving the problem of finding the size of the largest square of '1's in a binary matrix using dynamic programming. Let's break down the code:
+
+maximalSquare Function:
+Arguments:
+
+matrix: A 2D array representing the binary matrix.
+matrixSize: Number of rows in the matrix.
+matrixColSize: Pointer to an array storing the number of columns in each row of the matrix.
+Logic:
+
+It initializes m as the number of rows and n as the number of columns in the matrix.
+Declares a 2D array dp to store the size of the square ending at position (i, j) in the input matrix.
+Initializes ans to store the maximum size of the square found.
+Iterates through each cell of the input matrix:
+If it's in the first row or column and contains a '1', sets the corresponding cell in the dp matrix to 1 because it forms a square of size 1.
+For other cells:
+If the current cell in the input matrix contains a '1', calculates the size of the square ending at the current cell by taking the minimum of the sizes of the squares formed by the adjacent cells (up, left, and diagonal-up-left). It adds 1 to this minimum size and stores it in the dp matrix.
+If the current cell contains '0', sets the square size to 0.
+Updates ans to store the maximum square size encountered so far.
+Return:
+
+Returns the area of the largest square found (ans * ans).
+Macro Definitions:
+Two macros max and min are defined for finding the maximum and minimum of two values respectively using the ternary operator.
+Overall, this code implements a dynamic programming approach to solve the problem of finding the largest square of '1's in a binary matrix by using a 2D array dp to store the sizes of squares and efficiently calculating the maximum square size encountered.
