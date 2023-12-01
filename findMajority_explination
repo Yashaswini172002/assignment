@@ -1,3 +1,9 @@
+Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+Example 1:
+Input: nums = [3,2,3]
+Output: [3]
+
 Approach: The basic solution is to have two loops and keep track of the maximum count for all different elements. 
 If maximum count becomes greater than n/3 then print it. 
 If the maximum count doesn’t become more than n/3 after the traversal of array then the majority element doesn’t exists.
