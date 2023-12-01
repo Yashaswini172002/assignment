@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int lengthOfLastWord(const char *a) 
+{
+    int len = 0;
+    int i = 0, n = strlen(a);
+
+   
+    while (isspace(a[i]))
+    {
+        i++;
+    }
+
+    int end = n - 1;
+    while (end >= i && isspace(a[end])) 
+    {
+        end--;
+    }
+
+    for (; i <= end; i++)
+    {
+        if (a[i] == ' ')
+        {
+            len = 0;
+        } 
+        else
+        {
+            len++;
+        }    
+    }
+
+    return len;
+}
+
+
+int main()
+{
+    const char *input = "Hello world";
+    printf("The length of last word is %d\n", lengthOfLastWord(input));
+
+    return 0;
+}
